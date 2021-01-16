@@ -51,7 +51,7 @@ export const list = (params) => {
     method: "GET",
   })
     .then((response) => {
-      console.log(response)
+      console.log(response);
       return response.json();
     })
     .catch((err) => console.log(err));
@@ -70,6 +70,21 @@ export const read = (productId) => {
 export const listRelated = (productId) => {
   return fetch(`${API}/products/related/${productId}`, {
     method: "GET",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
+export const getBraintreeClientToken = (userId, token) => {
+  return fetch(`${API}/braintree/getToken/${userId}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json", //we are saying the backend API accepts JSON data (our API's JSON) response
+      "Content-Type": "application/json", //we are telling the backend what content type we are sending w the POST req.
+      Authorization: `Bearer ${token}`,
+    },
   })
     .then((response) => {
       return response.json();

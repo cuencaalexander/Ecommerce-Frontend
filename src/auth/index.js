@@ -1,8 +1,6 @@
 import { API } from "../config";
 
 export const signup = (user) => {
-  console.log(user);
-  console.log(user);
   console.log(user.name, user.email, user.password); //pulls values from desconstructed values.
   return fetch(`${API}/signup`, {
     method: "POST",
@@ -22,9 +20,6 @@ export const signup = (user) => {
 };
 
 export const signin = (user) => {
-  console.log(user);
-  console.log(user);
-  console.log(user.name, user.email, user.password); //pulls values from desconstructed values.
   return fetch(`${API}/signin`, {
     method: "POST",
     headers: {
