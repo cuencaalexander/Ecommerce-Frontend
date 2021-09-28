@@ -22,7 +22,7 @@ const Signup = () => {
     event.preventDefault();
     setValues({ ...values, error: false }); //why do we need this?
     signup({ name, email, password }).then((data) => {
-      console.log(data);
+      // console.log(data);
       if (data.error) {
         setValues({ ...values, error: data.error, success: false });
       } else {
