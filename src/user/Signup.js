@@ -102,7 +102,6 @@ const Signup = () => {
       {showSuccess()}
       {showError()}
       {signUpForm()}
-      {JSON.stringify(values)}
     </Layout>
   );
 };
