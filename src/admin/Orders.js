@@ -138,7 +138,6 @@ const Orders = () => {
               </div>
             );
           })}
-          {JSON.stringify(orders)}
         </div>
       </div>
     </Layout> //why no comma @8:40?
